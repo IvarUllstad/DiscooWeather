@@ -1,14 +1,12 @@
 body{
-    background-image:("discoo.jpg");
+    background-image: url("discoo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    }
-    styledimg {
-        background-image: url("discoo.jpg");
-        background-repeat: no-repeat;
-        width: 10px;
-        height: 20px;
-        }
+    text-align: center;
+}
+h3{
+    text-decoration: underline;
+}
 h1{
     color: red;
 }
