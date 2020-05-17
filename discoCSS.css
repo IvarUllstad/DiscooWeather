@@ -16,11 +16,16 @@ h3{
     text-decoration: underline;
 }
 h1{
+    font-size: 40px;
     color: red;
 
 
 
 
+}
+h3{
+    font-size: 25px;
+}
 
 button{
     color: white;
