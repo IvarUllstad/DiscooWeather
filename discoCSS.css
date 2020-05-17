@@ -1,12 +1,17 @@
-<<<<<<< HEAD
+* {
+    text-align: center;
+}
+
+h3{
+    text-decoration: underline;
+}
+
 .body
 {
     background-image:("disco.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     }
-=======
 h1{
     color: red;
 }
->>>>>>> 59610136b48e83a57b1bccc70db9e444f4ba5450
