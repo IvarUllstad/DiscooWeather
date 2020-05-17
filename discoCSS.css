@@ -34,6 +34,13 @@ button{
     width: 120px;
     border-radius: 50%;
 }
+textarea{
+    background-color: lightyellow;
+    border-radius: 5px;
+        border-width: 5px;
+        border-color: olive;
+        margin: 50px, 50px, 50px, 50px;
+}
 
 
 /* Tabellen med 10 närmsta banorna och deras väder */
