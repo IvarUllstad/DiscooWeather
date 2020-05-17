@@ -1,9 +1,9 @@
 <html>
 <head>
 DiscooWeather Homepage
-HEHEHEHEH
 </head>
 <body>
+<test> hejhej </test>
 <header>
     <h1>DiscooWeather</h1>
     <h3>Där solen alltid skiner!</h3>
