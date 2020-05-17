@@ -42,6 +42,11 @@ textarea{
         margin: 50px, 50px, 50px, 50px;
 }
 
+/* Tar bort underline från headern */
+a, u{
+    text-decoration: none;
+}
+
 
 /* Tabellen med 10 närmsta banorna och deras väder */
 .top10table{
