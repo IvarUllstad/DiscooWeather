@@ -65,3 +65,9 @@ border-radius: 5%;
     border: 5px solid  crimson;
     border-radius: 5%;
 }
+
+#map{
+    height: 400px;
+    width: 700px;
+    background-color: grey;
+}
