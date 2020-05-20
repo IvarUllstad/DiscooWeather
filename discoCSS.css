@@ -41,6 +41,19 @@ textarea{
         border-color: olive;
         margin: 50px, 50px, 50px, 50px;
 }
+legend{
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+label 
+{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+
+}
 
 /* Tar bort underline från headern */
 a, u{
