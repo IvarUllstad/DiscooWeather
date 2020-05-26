@@ -17,8 +17,11 @@ function Kommentera($comment)
     if($stmt->execute())
     { 
         $db->close();
-        
+        echo "Kommentar skickad!";
+        echo ' <a href="Forum.php">Gå tillbaka</a>';
         return true;
+        
+
     }
     else
     {
