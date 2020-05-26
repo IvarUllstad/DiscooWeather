@@ -2,8 +2,6 @@
 * Fixa s� att man kan uppdatera saker p� anv�ndarsidan
 * Fixa s�ka efter kommentarer
 * Fixa l�gga till bild till kommentar
-* Fixa weather.php filen så att det inte blir massa errors
-* Lägga till menyrad på weather.php
 
 
 RegistrereAnv�ndare php:n, ta bort == false och s�tt "!" framf�r ist�llet om det g�r

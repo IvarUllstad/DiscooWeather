@@ -13,14 +13,14 @@
         </head>
         <body>
             <header>
-                <a href="index.html"><h1>DiscooWeather</h1></a>
+                <a href="index.php"><h1>DiscooWeather</h1></a>
                 <h3>Alltid redo för en runda!</h3>
             </header>
             <div>
-                <a href="index.HTML"><button class="menuBtn">Startsida</button></a>
-                <a href="userRegistration.html"><button class="menuBtn">Registrera</button></a>
-                <a href="loggain.html"><button class="menuBtn">Logga in</button></a>
-                <a href="forum.html"><button class="menuBtn">Forum</button></a>
+                <a href="index.php"><button class="menuBtn">Startsida</button></a>
+                <a href="userRegistration.php"><button class="menuBtn">Registrera</button></a>
+                <a href="loggain.php"><button class="menuBtn">Logga in</button></a>
+                <a href="forum.php"><button class="menuBtn">Forum</button></a>
                 <a href="Weather.php"><button class="menuBtn">Weather</button></a>
 
             </div>
