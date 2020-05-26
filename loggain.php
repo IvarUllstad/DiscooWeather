@@ -21,7 +21,7 @@
             <br>
             <br>
             
-            <form>
+            <form method="POST" action>
                 <fieldset>
                     <legend>Logga in</legend>
                     <label for="username"> Username:</label><br>
