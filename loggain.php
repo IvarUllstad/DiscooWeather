@@ -21,7 +21,7 @@
             <br>
             <br>
             
-            <form method="POST" action>
+            <form method="POST" action="./index.php">
                 <fieldset>
                     <legend>Logga in</legend>
                     <label for="username"> Username:</label><br>

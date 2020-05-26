@@ -1,3 +1,4 @@
+<?php session_start();?>
 <link rel="stylesheet" type="text/css" href="discoCSS.css"/>
 <?php
 
@@ -7,7 +8,7 @@ Kommentera($comment);
 
 function Kommentera($comment)
 {
-    $db=new SQLite3("Users.db");
+    $db=new SQLite3("./db/Users.db");
 
     $sql="INSERT INTO Comments (Kommentar)
     VALUES (:comment)";
