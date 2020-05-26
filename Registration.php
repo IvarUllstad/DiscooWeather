@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="discoCSS.css"/>
 <?php
 
 
@@ -20,7 +21,7 @@ function Registrera($username, $email, $lösenord)
     if($stmt->execute())
     { 
         $db->close();
-        echo "Ditt konto är nu skapat, klicka här för att logga in"; <br><br>
+        echo "Ditt konto är nu skapat, klicka här för att logga in"; 
         echo ' <a href="loggain.html">Logga in</a>';
 
         
