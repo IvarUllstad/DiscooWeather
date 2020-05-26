@@ -10,6 +10,7 @@
             <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
             integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
             crossorigin=""></script>
+            <script type="text/javascript" src="JS.js"></script>
         </head>
         <body>
             <header>
@@ -22,20 +23,18 @@
                 <a href="loggain.html"><button class="menuBtn">Logga in</button></a>
                 <a href="forum.html"><button class="menuBtn">Forum</button></a>
                 <a href="Weather.php"><button class="menuBtn">Weather</button></a>
-
             </div>
             <br>
             <br>
-
             <div class="top10table">
                 HÄR SKA TOP 10 Närmsta discbanorna ligga!
             </div>
             <br>
-            <div class="map" id="map">              
+            <div class="map" id="map">            
                 <script>
-                    var mymap = L.map('map').setView([59.85, 17.7], 10);
-                    var marker = L.marker([59.85, 17.7]).addTo(mymap);
-
+                    var mymap = L.map('map').setView([62.85, 17.7], 4);
+                    var marker = L.marker([65.8273707, 21.6915669]).addTo(mymap);
+                    marker.bindPopup("Namn: Antal hål:");
                     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                     maxZoom: 18,
@@ -43,8 +42,9 @@
                     tileSize: 512,
                     zoomOffset: -1,
                     accessToken: 'pk.eyJ1IjoibmVkaW5kZWwiLCJhIjoiY2thZjhjaDByMGZ3YzJxdGVvZng2d21kZCJ9.ohjAKkawBa-2Xn_XKKcsKQ'
-            }).addTo(mymap);
-                </script>
+                    }).addTo(mymap);
+                </script>                              
             </div>
+            <?php include 'GetMarkerInformation.php' ?>  
         </body>
     </html>

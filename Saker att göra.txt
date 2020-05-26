@@ -1,8 +1,11 @@
 * AJAX
-* Fixa så att man kan uppdatera saker på användarsidan
-* Fixa söka efter kommentarer
-* Fixa lägga till bild till kommentar
+* Fixa sï¿½ att man kan uppdatera saker pï¿½ anvï¿½ndarsidan
+* Fixa sï¿½ka efter kommentarer
+* Fixa lï¿½gga till bild till kommentar
 
 
-RegistrereAnvändare php:n, ta bort == false och sätt "!" framför istället om det går
-Ändra path till DB
+RegistrereAnvï¿½ndare php:n, ta bort == false och sï¿½tt "!" framfï¿½r istï¿½llet om det gï¿½r
+ï¿½ndra path till DB
+
+
+* FÃ¥ ut ikoner pÃ¥ kartan med vÃ¤rden
