@@ -4,7 +4,7 @@
 
 $username = $_POST['username'];
 $email = $_POST['email'];
-$lösenord = $_POST['lösenord'];
+$lösenord = $_POST['lösenord'] . password_hash;
 Registrera($username, $email, $lösenord);
 
 function Registrera($username, $email, $lösenord)
