@@ -1,0 +1,8 @@
+* AJAX
+* Fixa så att man kan uppdatera saker på användarsidan
+* Fixa söka efter kommentarer
+* Fixa lägga till bild till kommentar
+
+
+RegistrereAnvändare php:n, ta bort == false och sätt "!" framför istället om det går
+Ändra path till DB

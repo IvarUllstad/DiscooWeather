@@ -1,0 +1,15 @@
+* Varför skrivs ut på sidan ibland och ibland under?
+* Hur kan jag få en notis för att när den lyckats?
+* Hur kan jag länka php till JS så att variabler följer med eller ska man inte göra det?  Hur kan man lösa problemet på annat sätt?
+
+* Hur kan jag få att det skriver ut till sidan med röd text som jag tänkte från början?
+* Hur kan information skickas till en nya sida om lyckad inloggning utan att vara permanent?
+
+___________
+
+* Liknande som förut, hur skriver man ut det till exempel en label när hen har förflyttats till den nya sidan?
+
+* Om man är inloggad ska fälten vara utbytta med mejl och Användarnamn och loggain-knappen vara en logga ut knapp.
+* Om man försöker ta sig till en annan sida så kommer man till startsidan
+
+
