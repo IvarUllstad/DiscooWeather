@@ -1,3 +1,6 @@
+<?php session_start();
+
+?>
 <!DOCTYPE html>
     <html>
         <head>
@@ -6,6 +9,7 @@
             <link rel="stylesheet" type="text/css" href="discoCSS.css"/>
         </head>
         <body>
+            <?php require "validateLogin.php"?>
             <header>
                 <a href="index.php"><h1>DiscooWeather</h1></a>
                 <h3>Alltid redo för en runda!</h3>
