@@ -5,7 +5,11 @@
 
 
 RegistrereAnv�ndare php:n, ta bort == false och s�tt "!" framf�r ist�llet om det g�r
+<<<<<<< HEAD
 �ndra path till DB
 
 
 * Få ut ikoner på kartan med värden
+=======
+�ndra path till DB
+>>>>>>> cbc2f71cfff84b501c89189a00344552e58b6169
