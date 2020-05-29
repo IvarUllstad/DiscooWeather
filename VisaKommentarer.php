@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 if(!isset($_SESSION['Username'])||$_SESSION['Username']===false){
 header("./index.php?error=mustlogin");
 exit();
@@ -10,10 +10,17 @@ else{
   
   while($row = $results->fetchArray())
   {
-    echo $row['ID'];
-    echo '<br>';
-    echo $row['Kommentar'];
-    echo '<br>';
+      echo "<div class='kommentarbox'>";
+      echo "Användarnamn: ";
+      echo $_SESSION['username'];
+      echo '<br>';
+      echo "Email: ";
+      echo $_SESSION['email'];
+      echo'<br>_________________________________________________________________<br>' ;
+      echo "Kommentar: ";
+      echo $row['Kommentar'];
+      echo '<br><br><br>';
+      echo "</div>";
   }
 }
 ?>
