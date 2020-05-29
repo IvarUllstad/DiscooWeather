@@ -4,15 +4,20 @@
 }
 
 header{
-    background-color: rgb(0, 139, 7, 0.4);
+    background-color: rgba(238, 240, 238, 0.4);
     width: 700px;
-    padding-bottom: 1px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 body{
-    background-image: url("discoo.jpg");
+    background-image: url("../img/discoo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+}
+
+.knappMeny{
+    margin-bottom: 20px;
 }
 
 h1{
@@ -57,8 +62,10 @@ label
     font-weight: bold;
     font-size: 16px;
     margin: 40px;
+}
 
-
+#gråKnapp{
+    background-color: grey;
 }
 
 /* Tar bort underline från headern */
