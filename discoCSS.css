@@ -24,6 +24,10 @@ h3{
     text-decoration: underline;
     font-size: 25px;
 }
+ul{
+    font-size: 40px;
+    color: red;
+}
 
 button{
     color: white;
