@@ -1,0 +1,12 @@
+* AJAX
+* Fixa s� att man kan uppdatera saker p� anv�ndarsidan
+* Fixa s�ka efter kommentarer
+* Fixa l�gga till bild till kommentar
+
+
+RegistrereAnv�ndare php:n, ta bort == false och s�tt "!" framf�r ist�llet om det g�r
+�ndra path till DB
+
+
+* Få ut ikoner på kartan med värden
+�ndra path till DB

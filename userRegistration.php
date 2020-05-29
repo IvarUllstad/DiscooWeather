@@ -1,6 +1,3 @@
-<?php session_start();
-
-?>
 <!DOCTYPE html>
     <html>
         <head>
@@ -9,7 +6,6 @@
             <link rel="stylesheet" type="text/css" href="discoCSS.css"/>
         </head>
         <body>
-            <?php require "validateLogin.php"?>
             <header>
                 <a href="index.php"><h1>DiscooWeather</h1></a>
                 <h3>Alltid redo för en runda!</h3>
@@ -20,20 +16,22 @@
                 <a href="loggain.php"><button class="menuBtn">Logga in</button></a>
                 <a href="forum.php"><button class="menuBtn">Forum</button></a>
                 <a href="Weather.php"><button class="menuBtn">Weather</button></a>
+
             </div>
             <br>
             <br>
-
-            <form action="Kommentarer.php" method ="POST">
+            <form action="Registration.php" method ="POST">
                 <fieldset>
-                    <legend>Write a comment!</legend>
-                    <label for= "comment">  Skriv ditt meddelande: </label> <br>
-                    <textarea id ="comment" rows="10" cols="50" name="comment"></textarea>              
+                    <legend>Create a User</legend>
+                    <label for="username"> Username:</label><br>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="email"> E-mail:</label><br>
+                    <input type="text" id="email" name="email"> <br>
+                    <label for="lösenord"> Password:</label><br>
+                    <input type="text" id="lösenord" name="lösenord"><br>
+                    
                 </fieldset>
-                <input type="submit" value="Submit">
+                <button onclick="Registrera()">Submit </button>                
             </form>
-            <?php
-            include_once("VisaKommentarer.php");
-        ?>
-        </body>  
-</html>
+        </body>
+    </html>
