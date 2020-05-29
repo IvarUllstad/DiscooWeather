@@ -9,7 +9,7 @@ Registrera($username, $email, $lösenord);
 
 function Registrera($username, $email, $lösenord)
 {
-    $db=new SQLite3("Users.db");
+    $db=new SQLite3("./db/disco_database.db");
 
     $sql="INSERT INTO UserList (Username, Email, Lösenord)
     VALUES (:username, :email, :lösenord)";
@@ -22,7 +22,7 @@ function Registrera($username, $email, $lösenord)
     { 
         $db->close();
         echo "Ditt konto är nu skapat, klicka här för att logga in"; 
-        echo ' <a href="loggain.html">Logga in</a>';
+        echo ' <a href="loggain.php">Logga in</a>';
 
         
         return true;
