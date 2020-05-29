@@ -1,0 +1,9 @@
+// Låg högst upp i index, kanske kan fixa på ett bättre sätt sen.
+
+        <?php 
+        if(isset($_GET['error'])){
+            if($_GET['error']=="mustlogin"){
+                echo"Du måste logga in för att kunna se den här sidan";
+            }
+        }
+        ?>  
