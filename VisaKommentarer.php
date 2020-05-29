@@ -4,7 +4,7 @@ header("./index.php?error=mustlogin");
 exit();
 }
 else{
-  $db=new SQLite3("./db/Users.db");
+  $db=new SQLite3("./db/disco_database.db");
 
   $results = $db->query("SELECT * FROM 'Comments' ORDER BY ID");
   
