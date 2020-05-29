@@ -7,7 +7,7 @@ Kommentera($comment);
 
 function Kommentera($comment)
 {
-    $db=new SQLite3("./db/Users.db");
+    $db=new SQLite3("./db/disco_database.db");
 
     $sql="INSERT INTO Comments (Kommentar)
     VALUES (:comment)";
@@ -22,7 +22,7 @@ function Kommentera($comment)
     }
     else{
         $db->close();
-        return false ;              
+        return false ;  
     }
 }
 ?>

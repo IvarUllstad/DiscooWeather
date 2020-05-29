@@ -9,7 +9,7 @@ Registrera($username, $email, $lösenord);
 
 function Registrera($username, $email, $lösenord)
 {
-    $db=new SQLite3("Users.db");
+    $db=new SQLite3("./db/disco_database.db");
 
     $sql="INSERT INTO UserList (Username, Email, Lösenord)
     VALUES (:username, :email, :lösenord)";

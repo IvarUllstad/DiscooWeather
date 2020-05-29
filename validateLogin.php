@@ -1,6 +1,6 @@
 <?php
 session_start();
-$db = new SQLite3("./db/Users.db");
+$db = new SQLite3("./db/disco_database.db");
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $getusername=$db->prepare('SELECT * FROM UserList WHERE Username = :username');
     $getusername->bindParam(':username', $_POST['username']);
