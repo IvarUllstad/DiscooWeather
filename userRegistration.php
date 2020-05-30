@@ -2,7 +2,6 @@
     <body>
         <?php if(isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedOutHeader.php' ?>
-        <?php require 'include/models/Registration.php' ?>
         <form method ="POST">
             <fieldset>
                 <legend>Create a User</legend>
@@ -11,9 +10,16 @@
                 <label for="email"> E-mail:</label><br>
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
-                <input type="text" id="lösenord" name="lösenord"><br>                 
+                <input type="text" id="lösenord" name="lösenord"><br>
+                <button name = "submit" >Submit</button>                 
             </fieldset>
-            <button>Submit </button>                
         </form>
+        <?php 
+        if(isset($_POST['submit']))
+        {
+            include("Registration.php");
+        }
+         ?>
+
     </body>
 </html>
