@@ -1,30 +1,12 @@
-* AJAX
-* Fixa s� att man kan uppdatera saker p� anv�ndarsidan
-* Fixa s�ka efter kommentarer
-* Fixa l�gga till bild till kommentar
-
-
-RegistrereAnv�ndare php:n, ta bort == false och s�tt "!" framf�r ist�llet om det g�r
-�ndra path till DB
-
-
-* Få ut ikoner på kartan med värden
-�ndra path till DB
-
-
-___________________
-
-
-* Varf�r skrivs ut p� sidan ibland och ibland under?
-* Hur kan jag f� en notis f�r att n�r den lyckats?
-* Hur kan jag l�nka php till JS s� att variabler f�ljer med eller ska man inte g�ra det?  Hur kan man l�sa problemet p� annat s�tt?
-
-* Hur kan jag f� att det skriver ut till sidan med r�d text som jag t�nkte fr�n b�rjan?
-* Hur kan information skickas till en nya sida om lyckad inloggning utan att vara permanent?
-
-___________
-
-* Liknande som f�rut, hur skriver man ut det till exempel en label n�r hen har f�rflyttats till den nya sidan?
+﻿• Det skall vara mojligt att soka/ltrera bland det upplagda materialet.
+(• Det skall ocksa vara mojligt att se eventuella bilder nar material presenteras.)???
+• Funktioner kopplade till tjansteleverantoren skall ocksa implementeras, t.ex.:
+	{ publicering av information fran tjansteleverantoren
+	{ funktionalitet for granskning av upplagt material
+	{ mojlighet for tjansteleverantoren att editera/radera upplagt material
+	{ hantering av konton/roller
 
 * Om man �r inloggad ska f�lten vara utbytta med mejl och Anv�ndarnamn och loggain-knappen vara en logga ut knapp.
-* Om man f�rs�ker ta sig till en annan sida s� kommer man till startsidan
+* Lägg till en knapp i varje pin så man kan få vädret för området.
+* Logga in knappen - ge information till användaren och fixa var man blir länkad.
+* Lägg till en kommentarssida på forumknappen
