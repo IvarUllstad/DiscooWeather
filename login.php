@@ -9,6 +9,8 @@
                 <input type="text" id="username" name="username"><br>
                 <label for="password"> Password:</label><br>
                 <input type="password" id="password" name="password"><br>
+                <button id="submitlogin" name = "submit">Submit</button>                 
+
             </fieldset>
         </form>
         <?php 

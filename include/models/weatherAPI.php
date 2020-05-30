@@ -3,7 +3,7 @@
     echo'<h3>Välj en stad!</h3>
         <form method="POST">
             <input type="text" name="stad" placeholder="Välj stad">
-            <button type="submit">Submit</button><br>
+            <button type="submit" onclick="getWeather();">Submit</button><br>
         </form>';
     function getWeather(){
     $city = $_POST['stad'];
