@@ -1,5 +1,6 @@
 <?php include 'include/views/head.php'; ?>
     <body>
+        
         <?php if(isset($_SESSION['Username']))include 'include/views/loggedInHeader.php'; else  include 'include/views/loggedOutHeader.php'; ?>
         <div class="top10table">
             <?php include 'include/models/weatherAPI.php'; ?>
@@ -22,5 +23,6 @@
             </script>  
 
         </div>
+       
     </body>
 </html>
