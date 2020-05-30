@@ -29,13 +29,8 @@
                 <label for="email"> E-mail:</label><br>
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
-<<<<<<< HEAD
                 <input type="text" id="lösenord" name="lösenord"><br>
                 <button id="submitregister" name = "submit">Registrera</button>                 
-=======
-                <input type="password" id="lösenord" name="lösenord"><br>
-                <button id="submitregister" name = "submit">Submit</button>                 
->>>>>>> b053711ab90b16d2b165a76b86d345402cb75583
             </fieldset>
         </form>
         

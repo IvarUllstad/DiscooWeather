@@ -12,10 +12,7 @@
                 <button id="submitlogin" name = "submit">Submit</button>                 
 
             </fieldset>
-<<<<<<< HEAD
             <button type="submit" value="Submit">Logga in</button>
-=======
->>>>>>> b053711ab90b16d2b165a76b86d345402cb75583
         </form>
         <?php 
         if(isset($_POST['submit'])){

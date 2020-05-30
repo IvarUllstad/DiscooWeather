@@ -3,7 +3,7 @@
     <form method="POST">
     <input type="text" name="longitud" placeholder="Välj longitud"><br>
     <input type="text" name="latitud" placeholder="Välj latitud"><br>
-    <button name="submit" type="submit">Submit</button><br>';
+    <button name="submit" type="submit">Visa väder</button><br>';
 
     if(isset($_POST['submit'])){
     $longitud = $_POST['longitud'];
