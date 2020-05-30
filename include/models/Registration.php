@@ -21,13 +21,13 @@ function Registrera($username, $email, $hashed)
             
         $valid = false;
     
-        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=usertaken");
+        header("Location: ../../userRegistration.php?error=usertaken");
         exit();
     }
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         
         $valid = false;
-        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=wrongemail");
+        header("Location: ../../userRegistration.php?error=wrongemail");
         exit();
     }
     else{
@@ -41,7 +41,7 @@ function Registrera($username, $email, $hashed)
             
             $valid = false;
             
-            header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=emailtaken");
+            header("Location: ../../userRegistration.php?error=emailtaken");
             exit();
         }
     }
