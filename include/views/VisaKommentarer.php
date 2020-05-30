@@ -12,10 +12,8 @@ else{
   {
       echo "<div class='kommentarbox'>";
       echo "Användarnamn: ";
-      echo $_SESSION['username'];
+      echo $_SESSION['Username'];
       echo '<br>';
-      echo "Email: ";
-      echo $_SESSION['email'];
       echo'<br>_________________________________________________________________<br>' ;
       echo "Kommentar: ";
       echo $row['Kommentar'];
