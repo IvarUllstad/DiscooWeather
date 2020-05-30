@@ -2,7 +2,6 @@
     <body>
         <?php if(isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php require 'include/views/loggedOutHeader.php' ?>
-        <?php require 'include/models/validateLogin.php' ?>
         <form method="POST" action="./index.php">
             <fieldset>
                 <legend>Logga in</legend>
@@ -11,7 +10,11 @@
                 <label for="password"> Password:</label><br>
                 <input type="password" id="password" name="password"><br>
             </fieldset>
-            <input type="submit" value="Submit">
         </form>
+        <?php 
+        if(isset($_POST['submit'])){
+        include ("include/models/validateLogin.php");
+        }
+        ?>
     </body>
 </html>

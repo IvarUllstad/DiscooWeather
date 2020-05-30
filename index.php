@@ -1,13 +1,9 @@
 <?php include 'include/views/head.php'; ?>
-    <body>
-        
+    <body>     
         <?php if(isset($_SESSION['Username']))include 'include/views/loggedInHeader.php'; else  include 'include/views/loggedOutHeader.php'; ?>
         <div class="top10table">
             <?php include 'include/models/weatherAPI.php'; ?>
         </div><br>
-
-
-
         <div class="map" id="map">   
             <script>
                 var mymap = L.map('map').setView([64.85, 16.7], 5);
@@ -19,8 +15,7 @@
                 zoomOffset: -1,
                 accessToken: 'pk.eyJ1IjoibmVkaW5kZWwiLCJhIjoiY2thZjhjaDByMGZ3YzJxdGVvZng2d21kZCJ9.ohjAKkawBa-2Xn_XKKcsKQ'
                 }).addTo(mymap);
-            </script>';
-            
+            </script>';      
             <?php   
                 $db = new SQLite3("db/disco_database.db");
                 $createMarker = $db->query("SELECT * FROM 'DiscBanorSwe' ORDER BY ID"); 
@@ -33,7 +28,6 @@
                     </script>';
                 }
             ?>
-        </div>
-       
+        </div>       
     </body>
 </html>
