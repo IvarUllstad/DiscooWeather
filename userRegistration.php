@@ -24,6 +24,7 @@
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
                 <input type="text" id="lösenord" name="lösenord"><br>
+<<<<<<< HEAD
                 <button name = "submit" >Submit</button>                 
             </fieldset>
         </form>
@@ -33,6 +34,13 @@
         include("Registration.php");
         }
         ?>
+=======
+                <button name = "submit">Submit</button>                 
+            </fieldset>
+        </form>
+        <?php require 'include/models/Registration.php' ?>
+        
+>>>>>>> 1f3c035307f08b3c73d70513fc95f8a7f9203556
 
     </body>
 </html>
