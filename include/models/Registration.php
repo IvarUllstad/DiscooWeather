@@ -6,8 +6,10 @@ $lösenord = $_POST['lösenord'];
 $hashed = password_hash($lösenord, PASSWORD_DEFAULT);
 Registrera($username, $email, $hashed);
 
+
 function Registrera($username, $email, $hashed)
 {
+    $db=new SQLite3("./db/disco_database.db");
     $valid = true;
 
     $getname = $db->prepare('SELECT Username FROM UserList WHERE Username = :username');
@@ -22,7 +24,7 @@ function Registrera($username, $email, $hashed)
         header("Location: ./Registration.php?error=usertaken");
         exit();
     }
-    else if{
+     if{
         $getemail = $db->prepare('SELECT Email FROM UserList WHERE Email = :email');
         $getemail->bindParam(':email', $_POST['email']);
         
@@ -39,7 +41,6 @@ function Registrera($username, $email, $hashed)
     }
     if($valid){
 
-    $db=new SQLite3("./db/disco_database.db");
 
     $sql="INSERT INTO UserList (Username, Email, Lösenord)
     VALUES (:username, :email, :lösenord)";
