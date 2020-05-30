@@ -8,7 +8,10 @@
                 echo "<p>Användarnamnet finns redan, välj ett nytt</p>";
             }
             if($_GET['error'] == "emailtaken"){
-                echo "<p>Email-adressen finns redan, välj en ny";
+                echo "<p>Email-adressen finns redan, välj en ny</p>";
+            }
+            if($_GET['error'] == "wrongemail"){
+                echo "<p>Felaktig email-adress</p>";
             }
         }
         ?>
@@ -21,15 +24,10 @@
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
                 <input type="text" id="lösenord" name="lösenord"><br>
-                <button name = "submit" >Submit</button>                 
+                <button name = "submit" onclick="<?php require 'include/models/Registration.php' ?>">Submit</button>                 
             </fieldset>
         </form>
-        <?php 
-        if(isset($_POST['submit']))
-        {
-            include("include/models/Registration.php");
-        }
-         ?>
+        
 
     </body>
 </html>
