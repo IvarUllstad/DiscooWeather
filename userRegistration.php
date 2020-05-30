@@ -3,6 +3,9 @@
         <?php if(isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedOutHeader.php' ?>
         <?php require 'include/models/Registration.php' ?>
+        <?php 
+        
+        ?>
         <form method ="POST">
             <fieldset>
                 <legend>Create a User</legend>
