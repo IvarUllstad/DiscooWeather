@@ -9,15 +9,15 @@
         if(isset($_GET['error'])){
             if($_GET['error'] == "usertaken"){
                 echo "<p>Användarnamnet finns redan, välj ett nytt</p>";
-                exit();
+                
             }
             if($_GET['error'] == "emailtaken"){
                 echo "<p>Email-adressen finns redan, välj en ny</p>";
-                exit();
+                
             }
             if($_GET['error'] == "wrongemail"){
                 echo "<p>Felaktig email-adress</p>";
-                exit();
+                
             }
         }
         ?>
