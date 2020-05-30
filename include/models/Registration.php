@@ -21,10 +21,20 @@ function Registrera($username, $email, $hashed)
             
         $valid = false;
     
-        header("Location: ./Registration.php?error=usertaken");
+        header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=usertaken");
         exit();
     }
+<<<<<<< HEAD
      if{
+=======
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        
+        $valid = false;
+        header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=wrongemail");
+        exit();
+    }
+    else{
+>>>>>>> bb5d515f18d962b2daa0a38e0fb08c13f04c64a0
         $getemail = $db->prepare('SELECT Email FROM UserList WHERE Email = :email');
         $getemail->bindParam(':email', $_POST['email']);
         
@@ -35,12 +45,16 @@ function Registrera($username, $email, $hashed)
             
             $valid = false;
             
-            header("Location: ./Registration.php?error=emailtaken");
+            header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=emailtaken");
             exit();
         }
     }
     if($valid){
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> bb5d515f18d962b2daa0a38e0fb08c13f04c64a0
 
     $sql="INSERT INTO UserList (Username, Email, Lösenord)
     VALUES (:username, :email, :lösenord)";
