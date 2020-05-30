@@ -81,7 +81,7 @@ a, u{
 
 /* Tabellen med 10 närmsta banorna och deras väder */
 .top10table{
-background-color: aqua;
+background-color: rgb(255, 255, 255);
 width: 700px;
 height: 300px;
 border: 5px solid  red;

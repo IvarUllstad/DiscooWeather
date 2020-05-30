@@ -9,10 +9,10 @@
     $getprecipitation = $getweather->list->item->precipitation['mode'];
     $getlastupdate = $getweather->list->item->lastupdate['value'];
 
-    echo'<h3>Välj en stad!</h3>
+    echo'<h3>Välj en bana!</h3>
         <form method="POST">
-            <input type="text" name="stad" placeholder="Välj stad">
-            <button type="submit">Submit</button><br>
+            <input type="text" name="stad" placeholder="Välj bana">
+            <button type="submit">Visa vädret</button><br>
         </form>';
 
     echo "<p style='color:green; font-size:30px;'>", $city, "</p>";

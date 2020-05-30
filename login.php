@@ -11,7 +11,7 @@
                 <label for="password"> Password:</label><br>
                 <input type="text" id="password" name="password"><br>
             </fieldset>
-            <input type="submit" value="Submit">
+            <button type="submit" value="Submit">Logga in</button>
         </form>
     </body>
 </html>
