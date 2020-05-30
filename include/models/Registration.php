@@ -1,7 +1,5 @@
 <link rel="stylesheet" type="text/css" href="discoCSS.css"/>
 <?php
-
-
 $username = $_POST['username'];
 $email = $_POST['email'];
 $lösenord = $_POST['lösenord'];
@@ -55,8 +53,6 @@ function Registrera($username, $email, $hashed)
         $db->close();
         echo "Ditt konto är nu skapat, klicka här för att logga in"; 
         echo ' <a href="loggain.php">Logga in</a>';
-
-        
         return true;
     }
     else

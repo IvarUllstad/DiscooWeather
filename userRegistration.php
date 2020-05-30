@@ -2,9 +2,15 @@
     <body>
         <?php if(isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedOutHeader.php' ?>
-        <?php require 'include/models/Registration.php' ?>
-        <?php 
-        
+        <?php
+        if(isset($_GET['error'])){
+            if($_GET['error'] == "usertaken"){
+                echo "<p>Användarnamnet finns redan, välj ett nytt</p>";
+            }
+            if($_GET['error'] == "emailtaken"){
+                echo "<p>Email-adressen finns redan, välj en ny";
+            }
+        }
         ?>
         <form method ="POST">
             <fieldset>
@@ -14,9 +20,16 @@
                 <label for="email"> E-mail:</label><br>
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
-                <input type="text" id="lösenord" name="lösenord"><br>                 
+                <input type="text" id="lösenord" name="lösenord"><br>
+                <button name = "submit" >Submit</button>                 
             </fieldset>
-            <button onclick="Registrera()">Submit </button>                
         </form>
+        <?php 
+        if(isset($_POST['submit']))
+        {
+            include "includes/models/Registration.php"
+        }
+         ?>
+
     </body>
 </html>
