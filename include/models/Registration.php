@@ -20,13 +20,13 @@ function Registrera($username, $email, $hashed)
             
         $valid = false;
     
-        header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=usertaken");
+        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=usertaken");
         exit();
     }
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         
         $valid = false;
-        header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=wrongemail");
+        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=wrongemail");
         exit();
     }
     else{
@@ -40,7 +40,7 @@ function Registrera($username, $email, $hashed)
             
             $valid = false;
             
-            header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=emailtaken");
+            header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=emailtaken");
             exit();
         }
     }
@@ -59,7 +59,7 @@ function Registrera($username, $email, $hashed)
     { 
         $db->close();
         echo "Ditt konto är nu skapat, klicka här för att logga in"; 
-        echo ' <a href="loggain.php">Logga in</a>';
+        echo ' <a href="login.php">Logga in</a>';
         return true;
     }
     else
