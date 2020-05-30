@@ -38,6 +38,10 @@ ul{
     font-size: 40px;
     color: red;
 }
+li{
+    color:red;
+    font-size: 20px;
+}
 
 button{
     color: white;
@@ -83,7 +87,8 @@ a, u{
 .top10table{
 background-color: rgb(255, 255, 255);
 width: 700px;
-height: 300px;
+height: auto;
+box-sizing: border-box;
 border: 5px solid  red;
 border-radius: 5%;
 }
