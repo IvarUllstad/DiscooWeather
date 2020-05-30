@@ -87,14 +87,11 @@ a, u{
 .top10table{
 background-color: aqua;
 width: 700px;
-<<<<<<< HEAD
 height: auto;
 box-sizing: border-box;
 border: 5px solid  crimson;
-=======
 height: 300px;
 border: 5px solid  red;
->>>>>>> e834fdf2a0b4c0e1d769c2bbcad06771a9e7d833
 border-radius: 5%;
 }
 
