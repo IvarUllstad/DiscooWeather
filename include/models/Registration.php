@@ -12,7 +12,11 @@ function Registrera($username, $email, $hashed)
     $valid = true;
 
     $getname = $db->prepare('SELECT Username FROM UserList WHERE Username = :username');
+<<<<<<< HEAD
     $getname->bindParam(':username', $_POST['username']);
+=======
+    $getname->bindParam(':username', $username);
+>>>>>>> 361517810da29f5cc32679789f65cb47a0100ad9
         
     $userresult = $getname->execute();
     $bindresult = $userresult->fetchArray(SQLITE3_ASSOC);
@@ -20,18 +24,30 @@ function Registrera($username, $email, $hashed)
             
         $valid = false;
     
+<<<<<<< HEAD
         header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=usertaken");
+=======
+        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=usertaken");
+>>>>>>> 361517810da29f5cc32679789f65cb47a0100ad9
         exit();
     }
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         
         $valid = false;
+<<<<<<< HEAD
         header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=wrongemail");
+=======
+        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=wrongemail");
+>>>>>>> 361517810da29f5cc32679789f65cb47a0100ad9
         exit();
     }
     else{
         $getemail = $db->prepare('SELECT Email FROM UserList WHERE Email = :email');
+<<<<<<< HEAD
         $getemail->bindParam(':email', $_POST['email']);
+=======
+        $getemail->bindParam(':email', $email);
+>>>>>>> 361517810da29f5cc32679789f65cb47a0100ad9
         
         $result = $getemail->execute();
         $finalresult = $result->fetchArray(SQLITE3_ASSOC);
@@ -40,7 +56,11 @@ function Registrera($username, $email, $hashed)
             
             $valid = false;
             
+<<<<<<< HEAD
             header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=emailtaken");
+=======
+            header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=emailtaken");
+>>>>>>> 361517810da29f5cc32679789f65cb47a0100ad9
             exit();
         }
     }
