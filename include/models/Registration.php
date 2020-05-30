@@ -12,7 +12,7 @@ function Registrera($username, $email, $hashed)
     $valid = true;
 
     $getname = $db->prepare('SELECT Username FROM UserList WHERE Username = :username');
-    $getname->bindParam(':username', $username);
+    $getname->bindParam(':username', $_POST['username']);
         
     $userresult = $getname->execute();
     $bindresult = $userresult->fetchArray(SQLITE3_ASSOC);
@@ -20,18 +20,18 @@ function Registrera($username, $email, $hashed)
             
         $valid = false;
     
-        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=usertaken");
+        header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=usertaken");
         exit();
     }
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         
         $valid = false;
-        header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=wrongemail");
+        header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=wrongemail");
         exit();
     }
     else{
         $getemail = $db->prepare('SELECT Email FROM UserList WHERE Email = :email');
-        $getemail->bindParam(':email', $email);
+        $getemail->bindParam(':email', $_POST['email']);
         
         $result = $getemail->execute();
         $finalresult = $result->fetchArray(SQLITE3_ASSOC);
@@ -40,7 +40,7 @@ function Registrera($username, $email, $hashed)
             
             $valid = false;
             
-            header("Location: http://localhost/Projektuppgift/DiscooWeather/userRegistration.php?error=emailtaken");
+            header("Location http://localhost/Projektuppgift/DiscooWeather/Registration.php?error=emailtaken");
             exit();
         }
     }
