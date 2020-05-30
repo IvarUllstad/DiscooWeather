@@ -24,10 +24,15 @@
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
                 <input type="text" id="lösenord" name="lösenord"><br>
-                <button name = "submit" onclick="<?php require 'include/models/Registration.php' ?>">Submit</button>                 
+                <button name = "submit" >Submit</button>                 
             </fieldset>
         </form>
-        
+        <?php
+        if(isset($_POST['skicka']))
+        {
+        include("Registration.php");
+        }
+        ?>
 
     </body>
 </html>
