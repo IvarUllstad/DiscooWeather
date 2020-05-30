@@ -6,6 +6,7 @@ $lösenord = $_POST['lösenord'];
 $hashed = password_hash($lösenord, PASSWORD_DEFAULT);
 Registrera($username, $email, $hashed);
 
+
 function Registrera($username, $email, $hashed)
 {
     $db=new SQLite3("./db/disco_database.db");
