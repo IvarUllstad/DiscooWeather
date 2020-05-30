@@ -29,7 +29,7 @@
                 <label for="email"> E-mail:</label><br>
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
-                <input type="text" id="lösenord" name="lösenord"><br>
+                <input type="password" id="lösenord" name="lösenord"><br>
                 <button id="submitregister" name = "submit">Registrera</button>                 
             </fieldset>
         </form>

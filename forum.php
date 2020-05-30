@@ -2,14 +2,14 @@
     <body>
         <?php if(!isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedInHeader.php' ?>
-        <?php include "include/models/validateLogin.php" ?>          
-        <form action="include/views/forum.php" method ="POST">
+        <form action="forum.php" method ="POST">
             <fieldset>
                 <legend>Write a comment!</legend>
                 <label for= "comment">  Skriv ditt meddelande: </label> <br>
                 <textarea id ="comment" rows="10" cols="50" name="comment"></textarea>
-                <button name = "skicka" >Skicka in</button> <br><br>
             </fieldset>
+            <button name = "skicka" >Posta</button> <br><br>
+
         </form>
         <?php
         if(isset($_POST['skicka']))

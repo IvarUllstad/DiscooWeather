@@ -1,4 +1,3 @@
-<?php session_start();?>
 <link rel="stylesheet" type="text/css" href="discoCSS.css"/>
 <?php
 
@@ -17,7 +16,6 @@ function Kommentera($comment)
     if($stmt->execute()){ 
         $db->close();
         echo "Kommentar skickad!";
-        echo ' <a href="Forum.php">Gå tillbaka</a>';
         return true;
     }
     else{
