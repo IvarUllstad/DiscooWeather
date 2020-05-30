@@ -5,13 +5,6 @@
 <div class="knappMeny">
     <a href="index.php"><button class="menuBtn">Startsida</button></a>
     <button class="menuBtn" id="gråKnapp">Registrera</button>
-    <button name="logout" class="menuBtn" onclick="logout()">Logga ut</button>
+    <a href="models/logout.php"><button name="logout" class="menuBtn">Logga ut</button></a>
     <a href="forum.php"><button class="menuBtn">Forum</button></a>
 </div>
-<?php
-function logout(){
-    session_start();
-    session_destroy();
-    header("Location: ./index.php");
-}
-?>
