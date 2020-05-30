@@ -2,7 +2,20 @@
     <body>
         <?php if(isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedOutHeader.php' ?>
-        <form action="Registration.php" method ="POST">
+        <?php
+        if(isset($_GET['error'])){
+            if($_GET['error'] == "usertaken"){
+                echo "<p>Användarnamnet finns redan, välj ett nytt</p>";
+            }
+            if($_GET['error'] == "emailtaken"){
+                echo "<p>Email-adressen finns redan, välj en ny</p>";
+            }
+            if($_GET['error'] == "wrongemail"){
+                echo "<p>Felaktig email-adress</p>";
+            }
+        }
+        ?>
+        <form method ="POST">
             <fieldset>
                 <legend>Create a User</legend>
                 <label for="username"> Username:</label><br>
@@ -10,9 +23,12 @@
                 <label for="email"> E-mail:</label><br>
                 <input type="text" id="email" name="email"> <br>
                 <label for="lösenord"> Password:</label><br>
-                <input type="text" id="lösenord" name="lösenord"><br>                 
+                <input type="text" id="lösenord" name="lösenord"><br>
+                <button name = "submit">Submit</button>                 
             </fieldset>
-            <button onclick="Registrera()">Submit </button>                
         </form>
+        <?php require 'include/models/Registration.php' ?>
+        
+
     </body>
 </html>

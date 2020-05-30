@@ -1,7 +1,8 @@
-<?php include 'include/views/head.php'; ?>
+<?php require 'include/views/head.php'; ?>
     <body>
         <?php if(isset($_SESSION['Username'])) header('Location: index.php') ?>
-        <?php include 'include/views/loggedOutHeader.php' ?>
+        <?php require 'include/views/loggedOutHeader.php' ?>
+        <?php require 'include/models/validateLogin.php' ?>
         <form method="POST" action="./index.php">
             <fieldset>
                 <legend>Logga in</legend>

@@ -9,4 +9,8 @@
         echo $uniqueMarker['Hål'];
         echo '<br>';
     }
+    var_dump($uniqueMarker['X-koordinat']);
+    var_dump($uniqueMarker['Y-koordinat']);
+    var_dump($uniqueMarker['Namn']);
+    var_dump($uniqueMarker['Hål']);
 ?>
