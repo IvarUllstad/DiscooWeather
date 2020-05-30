@@ -12,7 +12,7 @@
                 <label for="lösenord"> Password:</label><br>
                 <input type="text" id="lösenord" name="lösenord"><br>                 
             </fieldset>
-            <button onclick="Registrera()">Submit </button>                
+            <button>Submit </button>                
         </form>
     </body>
 </html>
