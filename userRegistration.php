@@ -27,7 +27,7 @@
         <?php 
         if(isset($_POST['submit']))
         {
-            include "includes/models/Registration.php"
+            include("include/models/Registration.php");
         }
          ?>
 
