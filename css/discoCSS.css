@@ -60,6 +60,11 @@ p{
     font-size: 20px;
 }
 
+#fil{
+    width: 170px;
+    background-color: red;
+}
+
 button{
     color: white;
     font-weight: bold;
@@ -70,10 +75,10 @@ button{
     border-radius: 50%;
 }
 textarea{
-    background-color: lightyellow;
+    background-color: white;
     border-radius: 5px;
         border-width: 5px;
-        border-color: olive;
+        border-color: red;
         margin: 50px, 50px, 50px, 50px;
 }
 legend{
@@ -88,6 +93,15 @@ label
     font-weight: bold;
     font-size: 16px;
     margin: 40px;
+}
+
+#kommentarBild{
+    width: 100%;
+    max-width: 500px;
+}
+
+#sökordKnapp{
+    width: 170px;
 }
 
 #gråKnapp{

@@ -7,3 +7,9 @@
             }
         }
         ?>  
+
+
+
+// Test för att skriva ut saker.
+
+   echo '<script>alert('.$sökord.')</script>';
