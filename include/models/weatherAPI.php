@@ -17,8 +17,8 @@
     $getspeed = $getweather->list->item->wind->speed['value'];
     $getcloud = $getweather->list->item->weather['value'];
     $getprecipitation = $getweather->list->item->precipitation['mode'];
-    $getlastupdate = $getweather->list->item->lastupdate['value'];
-
+    
+    
     $urlforcast="http://api.openweathermap.org/data/2.5/forecast?lat=$latitud&lon=$longitud&units=metric&cnt=5&appid=4f7d232c3905970a64641def6fb34710";
               
         $json = file_get_contents($urlforcast);
@@ -32,7 +32,6 @@
     echo "<li>", 'Vindhastigheten är: ', ($getspeed), ' m/s', "</li>";
     echo "<li>", 'Vädret är: ', ($getcloud), "</li>";
     echo "<li>", 'Nederbörd: ', ($getprecipitation), "</li>";
-    echo "<li>", 'Senaste uppdateringen: ', ($getlastupdate), "</li><br>";
     echo "<p>5-dagars prognos!</p>";        
 
     foreach($clima['list'] as $data) { 
