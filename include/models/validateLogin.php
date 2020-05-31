@@ -7,6 +7,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $result = $userresult -> fetchArray(SQLITE3_ASSOC);
     if(password_verify($_POST['password'], $result['Lösenord'])){
         $_SESSION['Username']=$result['Username'];
+        $_SESSION['ID'] = $result['ID'];
         header("Location: ./index.php");
         exit();
     }
