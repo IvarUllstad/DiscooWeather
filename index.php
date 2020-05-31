@@ -21,19 +21,34 @@
                 zoomOffset: -1,
                 accessToken: 'pk.eyJ1IjoibmVkaW5kZWwiLCJhIjoiY2thZjhjaDByMGZ3YzJxdGVvZng2d21kZCJ9.ohjAKkawBa-2Xn_XKKcsKQ'
                 }).addTo(mymap);
-            </script>';      
+
+                
+
+                /*map.on('popupopen', function(e){
+                    var popup = e.popup;
+                    popup.setContent('coordinates: ' + popup.getLatLng().lng + '/'¨+ popup.getLatLng().lat);
+                });*/
+
+                
+
+                
+            </script>';   
+            
             <?php   
                 $db = new SQLite3("db/disco_database.db");
                 $createMarker = $db->query("SELECT * FROM 'DiscBanorSwe' ORDER BY ID"); 
 
                 while($uniqueMarker = $createMarker->fetchArray()){
+                
                     echo'
                     <script>
                         var marker = L.marker(["'.$uniqueMarker['X-koordinat'].'","'.$uniqueMarker['Y-koordinat'].'"]).addTo(mymap);
                         marker.bindPopup("'.$uniqueMarker['Namn'].'");
+                        
                     </script>';
                 }
             ?>
+            
         </div>       
     </body>
 </html>
