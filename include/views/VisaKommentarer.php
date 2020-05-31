@@ -1,6 +1,5 @@
 <?php 
-function search()
-{
+
 
 
 $sökord = $_POST['sökord'];
@@ -41,5 +40,5 @@ $sökord = $_POST['sökord'];
     if($count == 0)
       echo '<label>Inget inlägg matchade tyvärr sökordet :(</label>';
   }
-}
+
 ?>
