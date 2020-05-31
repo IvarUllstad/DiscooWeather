@@ -5,7 +5,6 @@
     <button name="submit" type="submit">Visa väder</button><br>';
 
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
     $db = new SQLite3("db/disco_database.db");
     
 
@@ -16,16 +15,12 @@
     $hashed2 = $result->fetchArray(SQLITE3_ASSOC);
     $lat = $hashed2['X-koordinat'];
     $lng = $hashed2['Y-koordinat']; 
-    }
+    
 
-    GetWeather($lat, $lng);
-    /*if(isset($_POST['submit'])){
-    $longitud = $_POST['longitud'];
-    $latitud = $_POST['latitud'];
-    }  */       
-    function GetWeather($lat, $lng){
-
-        
+    if(isset($_POST['submit'])){
+    
+                
+            
     $url = "http://api.openweathermap.org/data/2.5/find?lat=$lat&lon=$lng&units=metric&type=accurate&mode=xml&APPID=1407925d5eb998aa25042dffa58983c5";
     $getweather = simplexml_load_file($url);
     $gethumidity = $getweather->list->item->humidity['value'];
@@ -34,7 +29,8 @@
     $getcloud = $getweather->list->item->weather['value'];
     $getprecipitation = $getweather->list->item->precipitation['mode'];
     
-    
+  
+
     $urlforcast="http://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lng&units=metric&cnt=5&appid=4f7d232c3905970a64641def6fb34710";
               
         $json = file_get_contents($urlforcast);
@@ -48,7 +44,7 @@
     echo "<li>", 'Vindhastigheten är: ', ($getspeed), ' m/s', "</li>";
     echo "<li>", 'Vädret är: ', ($getcloud), "</li>";
     echo "<li>", 'Nederbörd: ', ($getprecipitation), "</li>";
-    echo "<p>5-dagars prognos!</p>";        
+    echo "<p>5-dagars prognos!</p>";       
 
     foreach($clima['list'] as $data) { 
         echo "<li>", 'Temperaturen uppskattas vara: ', $data['main']['temp']. ' grader celcius', "</li>";
@@ -58,5 +54,4 @@
                         
     }
 }
-    
 ?>
