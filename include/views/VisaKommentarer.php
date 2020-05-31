@@ -1,12 +1,11 @@
 <?php 
-$sökord = $_POST['sökord'];
   if(!isset($_SESSION['Username'])||$_SESSION['Username']===false){
     header("./index.php?error=mustlogin");
     exit();
   } 
   else{
-    $sökord = $_POST['sökord'];
     $db=new SQLite3("./db/disco_database.db");
+
 
     if($sökord == "")
         $results = $db->query("SELECT * FROM 'Comments' ORDER BY ID");
@@ -24,6 +23,9 @@ $sökord = $_POST['sökord'];
         echo "<div class='kommentarbox'>";
         echo "Användarnamn: ";
         echo $row['Användarnamn'];
+        echo '<br>';
+        echo "KommentarsID: ";
+        echo $row['ID'];
         echo '<br>_________________________________________________________________<br><br>';
         echo "Kommentar: ";
         echo $row['Kommentar'];
