@@ -8,7 +8,15 @@
         }  
         ?>
         <div class="top10table">
-            <?php include 'include/models/weatherAPI.php'; ?>
+            <?php include 'include/models/weatherAPI.php'; 
+            
+            if(isset($_GET['error'])){
+             if($_GET['error'] == "notexist"){
+              echo "<h3>Banan du söker finns tyvärr inte!</h3>";
+             }
+            }
+             
+            ?>
         </div><br>
         <div class="map" id="map">   
             <script>

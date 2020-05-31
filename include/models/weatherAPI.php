@@ -15,6 +15,11 @@
     $hashed2 = $result->fetchArray(SQLITE3_ASSOC);
     $lat = $hashed2['X-koordinat'];
     $lng = $hashed2['Y-koordinat']; 
+
+    if($_POST['discbana'] !== $hashed2['Namn']){
+        header("Location: ./index.php?error=notexist");
+        exit();
+    }
     
 
     if(isset($_POST['submit'])){
