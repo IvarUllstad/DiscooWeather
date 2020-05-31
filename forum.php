@@ -1,4 +1,8 @@
-<?php include 'include/views/head.php'; ?>
+<?php include 'include/views/head.php'; 
+echo "Ditt id är:";
+echo $_SESSION['ID'];
+?>
+
     <body>
         <?php if(!isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedInHeader.php' ?>

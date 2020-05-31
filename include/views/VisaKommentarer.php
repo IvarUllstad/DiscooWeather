@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 if(!isset($_SESSION['Username'])||$_SESSION['Username']===false){
 header("./index.php?error=mustlogin");
 exit();
@@ -12,7 +13,10 @@ else{
   {
       echo "<div class='kommentarbox'>";
       echo "Användarnamn: ";
-      echo $row['Användarnamn'];
+      echo $row['Användarnamn']; 
+      echo '<br>';
+      echo "KommentarsID: ";
+      echo $row['ID'];
       echo '<br>';
       echo '<br>_________________________________________________________________<br>' ;
       echo "Kommentar: ";
