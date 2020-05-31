@@ -1,6 +1,11 @@
 <?php include 'include/views/head.php'; 
-
+if ( $_SESSION['ID'] == 10) 
+{
+   echo '<a href="RemovePost.php"> <button method ="POST" type ="submit" id="RemovePost" name="RemovePost">Ta bort inlägg</button></a>';
+}
 ?>
+
+
 
     <body>
         <?php if(!isset($_SESSION['Username'])) header('Location: index.php') ?>
