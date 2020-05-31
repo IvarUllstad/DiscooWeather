@@ -1,16 +1,32 @@
 <?php
-    echo'<h3>Välj koordinater!</h3>
+    echo'<h3>Välj Discgolfbana!</h3>
     <form method="POST">
-    <input type="text" name="longitud" placeholder="Välj longitud"><br>
-    <input type="text" name="latitud" placeholder="Välj latitud"><br>
+    <input type="text" name="discbana" placeholder="Skriv in banans namn!"><br>
     <button name="submit" type="submit">Visa väder</button><br>';
 
-    if(isset($_POST['submit'])){
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $db = new SQLite3("db/disco_database.db");
+    
+
+    $getlatlng = $db->prepare('SELECT * FROM DiscBanorSwe WHERE Namn  = :discbana');
+    $getlatlng->bindParam(':discbana', $_POST['discbana']);
+    $result = $getlatlng->execute();
+
+    $hashed2 = $result->fetchArray(SQLITE3_ASSOC);
+    $lat = $hashed2['X-koordinat'];
+    $lng = $hashed2['Y-koordinat']; 
+    }
+
+    GetWeather($lat, $lng);
+    /*if(isset($_POST['submit'])){
     $longitud = $_POST['longitud'];
     $latitud = $_POST['latitud'];
-                
-            
-    $url = "http://api.openweathermap.org/data/2.5/find?lat=$latitud&lon=$longitud&units=metric&type=accurate&mode=xml&APPID=1407925d5eb998aa25042dffa58983c5";
+    }  */       
+    function GetWeather($lat, $lng){
+
+        
+    $url = "http://api.openweathermap.org/data/2.5/find?lat=$lat&lon=$lng&units=metric&type=accurate&mode=xml&APPID=1407925d5eb998aa25042dffa58983c5";
     $getweather = simplexml_load_file($url);
     $gethumidity = $getweather->list->item->humidity['value'];
     $gettemp = $getweather->list->item->temperature['value'];
@@ -19,7 +35,7 @@
     $getprecipitation = $getweather->list->item->precipitation['mode'];
     
     
-    $urlforcast="http://api.openweathermap.org/data/2.5/forecast?lat=$latitud&lon=$longitud&units=metric&cnt=5&appid=4f7d232c3905970a64641def6fb34710";
+    $urlforcast="http://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lng&units=metric&cnt=5&appid=4f7d232c3905970a64641def6fb34710";
               
         $json = file_get_contents($urlforcast);
         $clima = json_decode($json,true);
@@ -42,4 +58,5 @@
                         
     }
 }
+    
 ?>
