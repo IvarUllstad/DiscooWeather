@@ -1,11 +1,15 @@
 <?php 
+function search()
+{
+
+
+$sökord = $_POST['sökord'];
   if(!isset($_SESSION['Username'])||$_SESSION['Username']===false){
     header("./index.php?error=mustlogin");
     exit();
   } 
   else{
     $db=new SQLite3("./db/disco_database.db");
-
 
     if($sökord == "")
         $results = $db->query("SELECT * FROM 'Comments' ORDER BY ID");
@@ -37,4 +41,5 @@
     if($count == 0)
       echo '<label>Inget inlägg matchade tyvärr sökordet :(</label>';
   }
+}
 ?>
