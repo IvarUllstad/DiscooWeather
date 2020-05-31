@@ -2,7 +2,7 @@
 <html>
 <?php
     include 'include/views/head.php';
-    if ($_SESSION['ID'] == 10) 
+    if ($_SESSION['Roll'] == "mod") 
     {
 
         echo' <form method ="POST">

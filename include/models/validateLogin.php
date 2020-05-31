@@ -8,6 +8,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(password_verify($_POST['password'], $result['Lösenord'])){
         $_SESSION['Username']=$result['Username'];
         $_SESSION['ID'] = $result['ID'];
+        $_SESSION['Roll'] =$result['Roll'];
         header("Location: ./index.php");
         exit();
     }
