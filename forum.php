@@ -1,4 +1,12 @@
-<?php include 'include/views/head.php'; ?>
+<?php include 'include/views/head.php'; 
+if ( $_SESSION['Roll'] == "mod") 
+{
+   echo '<a href="RemovePost.php"> <button method ="POST" type ="submit" id="RemovePost" name="RemovePost">Ta bort inlägg</button></a>';
+}
+?>
+
+
+
     <body>
         <?php if(!isset($_SESSION['Username'])) header('Location: index.php') ?>
         <?php include 'include/views/loggedInHeader.php' ?>
