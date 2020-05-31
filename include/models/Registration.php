@@ -21,13 +21,13 @@ function Registrera($username, $email, $hashed)
             
         $valid = false;
     
-        header("Location: ../../userRegistration.php?error=usertaken");
+        header("Location: ./userRegistration.php?error=usertaken");
         exit();
     }
     if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
         
         $valid = false;
-        header("Location: ../../userRegistration.php?error=wrongemail");
+        header("Location: ./userRegistration.php?error=wrongemail");
         exit();
     }
     else{
@@ -41,7 +41,7 @@ function Registrera($username, $email, $hashed)
             
             $valid = false;
             
-            header("Location: ../../userRegistration.php?error=emailtaken");
+            header("Location: ./userRegistration.php?error=emailtaken");
             exit();
         }
     }
@@ -59,8 +59,8 @@ function Registrera($username, $email, $hashed)
     if($stmt->execute())
     { 
         $db->close();
-        echo "Ditt konto är nu skapat, klicka här för att logga in"; 
-        echo ' <a href="login.php">Logga in</a>';
+        echo "<label> Ditt konto är nu skapat, klicka här för att "; 
+        echo ' <a href="login.php">Logga in</a></label';
         return true;
     }
     else
